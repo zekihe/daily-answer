@@ -1,0 +1,153 @@
+
+/* 根元素样式 设置页面背景、字体大小、字体颜色，字符间距、长单词换行 */
+page {
+  background-color: #f3f3f3;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  color: #333;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+ 
+/* 按钮样式处理 */
+button{font-size: 28rpx;}
+/* 取消按钮默认的阴影效果 */
+button::after{border:none;}
+ 
+/* 设置图片默认样式，取消默认尺寸 */
+image{display: block;height: auto;width: auto;}
+ 
+/* 列式弹性盒子 */
+.flex_col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+/* 行式弹性盒子 */
+.flex_row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+ 
+/* 弹性盒子弹性容器 */
+.flex_col .flex_grow{width:0;flex-grow: 1;}
+.flex_row .flex_grow{flex-grow: 1;}
+ 
+/* 弹性盒子允许换行 */
+.flex_col.flex_wrap{flex-wrap: wrap;}
+ 
+/* 弹性盒子居中对齐 */
+.flex_col.flex_center,.flex_row.flex_center{justify-content: center;}
+ 
+/* 列式弹性盒子两端对齐 */
+.flex_col.flex_space{justify-content: space-between;}
+ 
+/* 字体颜色 */
+.color_333 {color: #333;}
+.color_666 {color: #666;}
+.color_999 {color: #999;}
+.color_fff {color: #fff;}
+.color_6dc{color: #6dca6d;}
+.color_d51{color: #d51917;}
+.color_09f{color: #0099ff;}
+ 
+/* 背景色*/
+.bg_fff{background-color: #ffffff;}
+ 
+/* 字体大小 */
+.size_10 {font-size: 20rpx;}
+.size_12 {font-size: 24rpx;}
+.size_14 {font-size: 28rpx;}
+.size_16 {font-size: 32rpx;}
+.size_18 {font-size: 36rpx;}
+.size_20 {font-size: 40rpx;}
+ 
+/* 字体加粗 */
+.font_b{font-weight: bold;}
+ 
+/* 对齐方式 */
+.align_c{text-align: center;}
+.align_l{text-align: left;}
+.align_r{text-align: right;}
+ 
+/* 遮罩 */
+.shade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 10;
+}
+ 
+/* 弹窗 */
+.shade_box{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 11;
+  min-width: 200rpx;
+  min-height: 200rpx;
+}
+
+.btn {
+    margin: 25rpx auto;
+    position: relative;
+    font-size: 32rpx;
+    color: #fff;
+    padding: 20rpx;
+    width: 550rpx;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #1abc9c;
+}
+
+.btn_default {
+    margin: 25rpx auto;
+    position: relative;
+    font-size: 32rpx;
+    color: #333;
+    padding: 20rpx;
+    width: 550rpx;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 #ccc;
+}
+
+.btn:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    width: 550rpx;
+    height: 550rpx;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.75s ease-in-out;
+}
+.btn:active:after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
