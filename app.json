@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/base/base",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/cloud/cloud",
+    "pages/answer/answer",  
+    "pages/signIn/signIn"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1abc9c",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#209E85",
+    "list": [{
+      "pagePath": "pages/base/base",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-active2.png"
+    }, {
+      "pagePath": "pages/signIn/signIn",
+      "text": "签到",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-active2.png"
+    }, {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me-active2.png"
+    }]
+  }
+}
