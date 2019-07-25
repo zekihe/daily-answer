@@ -1,0 +1,9 @@
+<!--pages/my/my.wxml-->
+<view>
+  <text></text>
+  <button bindtap="login">登录</button>
+  <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">获取用户id</button>
+  <text>{{openid}}</text>
+  <open-data type="userNickName"></open-data>
+  <open-data type="userAvatarUrl"></open-data>
+</view>
